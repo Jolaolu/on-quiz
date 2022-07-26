@@ -21,7 +21,7 @@ export interface IAnswer {
   ratingIncrease: TRatingIncrease
 }
 
-type TRatingIncrease = { [key in TShoeId]: number }
+export type TRatingIncrease = { [key in TShoeId]: number }
 
 export interface IQuestion {
   id: number
