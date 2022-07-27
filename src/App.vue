@@ -24,7 +24,7 @@
           Whether it's cross-town commutes, marathons or mountain ascents, On has shoes and apparel for every runner.
         </p>
       </article>
-      <base-button @click="restart">Restart Quiz</base-button>
+      <base-button ref="restart" @click="restart">Restart Quiz</base-button>
     </section>
   </div>
 </template>
