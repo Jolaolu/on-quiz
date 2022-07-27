@@ -18,7 +18,7 @@
       <h3>Congratulations!</h3>
       <p>Based on your selection, we have decided the following</p>
       <article class="result-item" v-for="(shoe, index) in results" :key="index">
-        <img class="result-item__img" :src="`/assets/images/${shoe.id}.png`" :alt="shoe.name" />
+        <img class="result-item__img" :src="getImage(shoe.id)" :alt="shoe.name" />
         <h4 class="result-item__title">{{ shoe.name }}</h4>
         <p class="result-item__description">
           Whether it's cross-town commutes, marathons or mountain ascents, On has shoes and apparel for every runner.
@@ -61,6 +61,10 @@ export default defineComponent({
       }, 3000)
     }
 
+    const getImage = (id: string): string => {
+      return require(`./assets/images/${id}.png`)
+    }
+
     const restart = (): void => {
       results.value = null
       updateStep(Step.Intro)
@@ -72,6 +76,7 @@ export default defineComponent({
 
     return {
       currentStep,
+      getImage,
       restart,
       results,
       showResult,
@@ -133,6 +138,7 @@ body {
   background-color: #777777;
   color: #c4c4c4;
   font-size: 1.5rem;
+  text-align: center;
 }
 .result {
   padding: 2rem;

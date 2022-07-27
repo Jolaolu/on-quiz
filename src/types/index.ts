@@ -1,4 +1,4 @@
-type TShoeId =
+export type TShoeId =
   | 'cloud'
   | 'cloudx'
   | 'cloudflow'

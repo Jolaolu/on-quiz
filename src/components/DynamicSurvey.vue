@@ -64,10 +64,10 @@ export default defineComponent({
 <style lang="scss">
 .survey {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
+  padding: 1rem 0 3rem;
   background: #777777;
   color: white;
   text-align: center;
@@ -75,7 +75,7 @@ export default defineComponent({
     font-size: 2rem;
   }
   &-item {
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 3rem;
   }
   &-answers {
     margin-top: 4rem;
@@ -99,7 +99,7 @@ export default defineComponent({
     text-align: center;
     word-spacing: 0.4rem;
     &:last-of-type {
-      margin-bottom: 60%;
+      margin-bottom: 40%;
     }
   }
 }
