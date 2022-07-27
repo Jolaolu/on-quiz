@@ -11,14 +11,14 @@
     </main>
     <dynamic-survey @complete-survey="showResult" v-else-if="currentStep === Step.Survey" ref="survey" />
     <section class="loader" v-else-if="currentStep === Step.Loading">
-      <img :src="require('@/assets/images/loader.gif')" alt="Loading" />
+      <img src="./assets/images/loader.gif" alt="Loading" />
       <p>We're running to get your results.</p>
     </section>
     <section class="result" v-else-if="currentStep === Step.Result">
       <h3>Congratulations!</h3>
       <p>Based on your selection, we have decided the following</p>
       <article class="result-item" v-for="(shoe, index) in results" :key="index">
-        <img class="result-item__img" :src="require(`@/assets/images/${shoe.id}.png`)" :alt="shoe.name" />
+        <img class="result-item__img" :src="`/assets/images/${shoe.id}.png`" :alt="shoe.name" />
         <h4 class="result-item__title">{{ shoe.name }}</h4>
         <p class="result-item__description">
           Whether it's cross-town commutes, marathons or mountain ascents, On has shoes and apparel for every runner.
@@ -140,7 +140,7 @@ body {
     margin-bottom: 4rem;
     text-align: center;
     &__img {
-      width: 80%;
+      width: 90%;
     }
     &__title {
       font-size: 2rem;
